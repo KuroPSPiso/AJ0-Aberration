@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqiefgdvkikc7"]
+
+[ext_resource type="PackedScene" uid="uid://c284ag5jspsss" path="res://plane.tscn" id="1_oqfnj"]
+[ext_resource type="PackedScene" uid="uid://ctxwlb8pyuuus" path="res://player.tscn" id="2_82s0h"]
+
+[node name="Stage1" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.933961, 0.357374, 0, -0.357374, 0.933961, 0.0852488, 3.81283, 2.58706)
+
+[node name="Plane" parent="." instance=ExtResource("1_oqfnj")]
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.478738, 0.877958, 0, -0.877958, 0.478738, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_82s0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.45465, 0)
